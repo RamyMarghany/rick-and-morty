@@ -4,3 +4,9 @@ export type CharactersType = {
     image: string,
     species: string,
 }
+
+export type EpisodesType = {
+    id: string,
+    name: string,
+    created: string,
+}

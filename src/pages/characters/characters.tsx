@@ -1,5 +1,5 @@
-import { useCharacters } from "../../graphql/queries";
-import { CharactersType } from "../../types/definition";
+import { useCharacters } from "graphql/queries";
+import { CharactersType } from "types/definition";
 export const Characters = () => {
   const { loading, error, characters } = useCharacters();
 
@@ -11,7 +11,7 @@ export const Characters = () => {
       <div>
         {characters.map((character: CharactersType) => (
           <div key={character.id}>
-            <h3>{character.name}</h3>
+            <a href={`/characters/${character.id}`}>{character.name}</a>
             <img src={character.image} alt={character.name} />
             <p>{character.species}</p>
           </div>
