@@ -6,7 +6,7 @@ export const Characters = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   return (
-    <div>
+    <div style={{ paddingTop: "6rem" }}>
       <h2>Rick & Morty Characters</h2>
       <div>
         {characters.map((character: CharactersType) => (

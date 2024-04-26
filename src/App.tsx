@@ -1,17 +1,17 @@
-import "./App.css";
 import { Characters } from "pages/characters/characters";
 import { Character } from "pages/character/character";
 import { Routes, Route } from "react-router-dom";
+import { StyledApp } from "App.styled";
+import { AppBar } from "components/AppBar/AppBar";
 function App() {
   return (
-    <div className="App">
-      <h2>Welcome to Rick and Morty world!</h2>
-
+    <StyledApp className="App">
+      <AppBar />
       <Routes>
         <Route path="/" element={<Characters />} />
         <Route path="/characters/:id" element={<Character />} />
       </Routes>
-    </div>
+    </StyledApp>
   );
 }
 
