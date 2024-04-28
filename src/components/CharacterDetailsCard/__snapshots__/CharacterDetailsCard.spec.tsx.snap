@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterDetailsCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-beySPh hrySto"
+  >
+    <picture>
+      <source
+        srcset="
+            /path/to/image.jpeg?w=100 100w, 
+            /path/to/image.jpeg?w=200 200w, 
+            /path/to/image.jpeg?w=400 400w, 
+            /path/to/image.jpeg?w=800 800w"
+        type="path/to/image.jpeg"
+      />
+      <img
+        alt="John Doe"
+        decoding="async"
+        height="300"
+        loading="lazy"
+        role="presentation"
+        sizes="(max-width:800px) 100vw, 50vw"
+        src="path/to/image"
+        width="300"
+      />
+    </picture>
+    <div>
+      <h3>
+        John Doe
+      </h3>
+      <p>
+        Species
+        <b>
+          Human
+        </b>
+      </p>
+      <p>
+        Gender
+        <b>
+          Male
+        </b>
+      </p>
+      <p>
+        Status
+        <b>
+          Alive
+        </b>
+      </p>
+      <p>
+        Location
+        <b>
+          Earth
+        </b>
+      </p>
+      <p>
+        Dimension
+        <b>
+          Dimension C-137
+        </b>
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

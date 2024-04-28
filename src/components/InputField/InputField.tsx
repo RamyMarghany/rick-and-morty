@@ -25,6 +25,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        aria-label={label}
       />
     </div>
   );
