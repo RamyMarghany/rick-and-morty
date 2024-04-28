@@ -1,5 +1,5 @@
 import { ErrorMessageWrapper } from "./ErrorMessage.styled";
-export const ErrorMessage = ({ message }: { message: string }) => {
+export const ErrorMessage: React.FC<{ message: string }> = ({ message }) => {
   return (
     <ErrorMessageWrapper>
       <h2>There's an error</h2>

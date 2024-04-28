@@ -1,4 +1,4 @@
-import { useQuery, gql } from '@apollo/client';
+import { useQuery, useLazyQuery, gql } from '@apollo/client';
 
 // Get Characters Query
 const GET_CHARACTERS = gql`
@@ -15,8 +15,8 @@ const GET_CHARACTERS = gql`
 `;
 
 export const useCharacters = () => {
-  const { loading, error, data } = useQuery(GET_CHARACTERS);
-  return { loading, error, characters: data?.characters?.results || [] };
+  const [getCharacters, { loading, error, data }] = useLazyQuery(GET_CHARACTERS);
+  return { getCharacters, loading, error, characters: data?.characters?.results || [] };
 };
 
 
