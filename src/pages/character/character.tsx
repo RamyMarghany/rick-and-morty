@@ -1,36 +1,21 @@
 import { useParams } from "react-router-dom";
-import { useCharacter } from "../../graphql/queries";
-import { EpisodesType } from "../../types/definition";
+import { useCharacter } from "graphql/queries";
+import { CharacterDetailsCard } from "components/CharacterDetailsCard/CharacterDetailsCard";
+import { EpisodesList } from "components/EpisodesList/EpisodesList";
+import { Spinner } from "components/Spinner/Spinner";
+import { ErrorMessage } from "components/ErrorMessage/ErrorMessage";
+
 export const Character = () => {
   const { id = "" } = useParams();
   const { loading, error, data } = useCharacter(id);
 
   const character = data?.character || {};
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Spinner size={75} />;
+  if (error) return <ErrorMessage message={error.message} />;
   return (
-    <div>
-      <h2>Rick & Morty Characters</h2>
-      <div>
-        <div key={character.id}>
-          <img src={character.image} alt={character.name} />
-          <h3>{character.name}</h3>
-          <p>{character.species}</p>
-          <p>{character.gender}</p>
-          <p>{character.status}</p>
-          <p>{character.location.name}</p>
-          <p>{character.location.dimension}</p>
-          <p>{character.location.type}</p>
-          <ul>
-            {character.episode.map((episode: EpisodesType) => (
-              <li key={episode.id}>
-                {episode.name}
-                <p>{episode.created}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
+    <>
+      <CharacterDetailsCard characterDetails={character} />
+      <EpisodesList episodes={character.episode} />
+    </>
   );
 };

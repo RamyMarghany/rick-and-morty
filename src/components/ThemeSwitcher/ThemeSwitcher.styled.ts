@@ -6,7 +6,7 @@ export const StyledToggleButton = styled.button`
   height: 24px;
   transition: .2s;
   width: 56px;
-  border-radius: 15px;
+  border-radius: calc(1.5 * ${(props) => props.theme.spacing.medium});
   position: relative;
   cursor: pointer;
   border: 1px solid ${(props) => props.theme.colors.primaryText};

@@ -9,3 +9,10 @@ export const StyledApp = styled.main`
     flex-direction: column;
     align-items: center;
 `
+
+export const StyledAppWrapper = styled.section`
+    max-width: ${(props) => props.theme.spacing.maxWidth};
+    margin: 0 auto;
+    padding-top: calc(4 * ${(props) => props.theme.spacing.default});
+    padding-bottom: ${(props) => props.theme.spacing.default};
+`

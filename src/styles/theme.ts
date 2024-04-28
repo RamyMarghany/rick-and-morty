@@ -3,16 +3,16 @@ export const LightTheme = {
         background: "#FAFAFA",
         primaryText: "#202020",
         secondaryText: "#616161",
-        primary: "#FF5252",
+        primary: "#b7daff",
         secondary: "#536DFE",
         error: "#D32F2F"
     },
     spacing: {
         maxWidth: "1200px",
-        small: "5px",
-        medium: "10px",
-        default: "20px",
-        large: "40px",
+        small: "0.3rem", //5px
+        medium: "0.6rem", //10px
+        default: "1.25rem", //20px
+        large: "2.5rem", //40px
     },
     typography: {
         xxsmall: "10px",
@@ -30,7 +30,7 @@ export const DarkTheme = {
         background: "#2B2B2B",
         primaryText: "#E8E6E3",
         secondaryText: "#B3B3B3",
-        primary: "#FF4081",
+        primary: "#660bac",
         secondary: "#448AFF",
         error: "#F44336"
     },

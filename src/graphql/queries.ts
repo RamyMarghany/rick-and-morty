@@ -15,8 +15,8 @@ const GET_CHARACTERS = gql`
 `;
 
 export const useCharacters = () => {
-    const { loading, error, data } = useQuery(GET_CHARACTERS);
-    return { loading, error, characters: data?.characters?.results || [] };
+  const { loading, error, data } = useQuery(GET_CHARACTERS);
+  return { loading, error, characters: data?.characters?.results || [] };
 };
 
 
@@ -45,10 +45,10 @@ const GET_CHARACTER = gql`
 `;
 
 export const useCharacter = (id: string) => {
-    const { error, loading, data } = useQuery(GET_CHARACTER, {
-        variables: {
-            id
-        }
-    })
-    return { error, loading, data }
+  const { error, loading, data } = useQuery(GET_CHARACTER, {
+    variables: {
+      id
+    }
+  })
+  return { error, loading, data }
 }
